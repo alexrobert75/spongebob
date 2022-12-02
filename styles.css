@@ -68,6 +68,28 @@ nav a:hover {
 
 }
 
+.fanclub {
+    background-color: yellow;
+    border: 5px dotted white;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    padding: 0 1em;
+    margin-right: 1rem;
+}
+
+.fanclub:hover {
+    background-color: coral;
+    font-size: 1.1rem;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.fanclub a {
+    text-decoration: none;
+    color: black;
+    cursor: url("cursor1.png"), pointer;
+}
+
 .city {
     background-image: url("resources/img/Bikini-Bottom.jpg");
     background-position: center;
@@ -205,6 +227,15 @@ audio::-webkit-media-controls-panel {
 
 #wikibob {
     width: 90%;
+}
+
+#fanh {
+    margin: 3rem 0;
+}
+
+#rank {
+    text-align: left;
+    line-height: 2rem;
 }
 
 footer {
