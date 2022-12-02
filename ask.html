@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexandre R">
+    <title>My Spongebob Website - friends</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://fonts.cdnfonts.com/css/spongebob-font-condensed" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+
+        <img src="resources/img/logo.webp" alt="logo-spongebob" class="logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="friends.html">FRIENDS</a></li>
+                <li><a href="ask.html">ASK BOB</a></li>
+            </ul>
+        </nav>
+
+        <img src="resources/img/logo.webp" alt="logo-spongebob" class="logo hidden">
+
+    </header>
+
+    <main>
+        <div class="maincontainer">
+            <div class="secondcontainer">
+                
+                <h1>LET'S CONTACT SPONGEBOB!</h1>
+
+                <p>You must have thousands of questions for Bob. Pick one and send it to him!</p>
+
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                    <br>
+                    <label for="email">E-mail</label>
+                    <input type="email"  id="email" required>
+                    <br>
+                    <p>I am</p>
+                    <label for="recr">A Lander</label>
+                    <input type="radio" name="categ" id="recr" value="lander">
+                    <label for="cur">From the Sea</label>
+                    <input type="radio" name="categ" id="cur" value="seaman">
+                    <br><br>
+                    <textarea name="message" id="message" rows="22" cols="80">Hi Bob, could you tell me...</textarea>
+                    <br>
+                    <input type="submit" value="SEND TO THE SEA" id="submitbutton">
+                </form>
+
+                <h2 id="ask">Bob didn't answer? Check for info here:</h2>
+                <iframe id="wikibob" title="Spongebob's wiki" height="1000"
+                src="https://spongebob.fandom.com/wiki/SpongeBob_SquarePants_(character)">
+                </iframe>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        Alex & Bob - 2022
+    </footer>
+
+
+</body>
+</html>
