@@ -1,258 +1,383 @@
 body {
-    margin: 0;
-    font-family: 'Big Shoulders Display', cursive;
-    background-color: black;
+  font-family: "SpongeBob Font Condensed", sans-serif;
+  margin: 0;
+  background-color: turquoise;
+  cursor: url("cursor2.png"), default;
+  width: 100vh;
+}
+
+:root {
+  --spongeblue: rgba(19, 1, 102, 0.9);
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: coral;
+}
+
+::-webkit-scrollbar-thumb {
+  background: yellow;
 }
 
 header {
-    position: fixed;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    z-index: 10;
-    border-right: 0.5px solid white;
-    
-}
-
-
-header a{
-    color: white;
-    text-decoration: none;
-}
-
-nav ul  {
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    opacity: 0.9;
-    display: block;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    font-size: 0.8em;
-    margin: 1.8rem;
-}
-
-nav a:hover{
-    animation: 1s linear 0s infinite alternate glow;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 1px 1px 2px coral, 0px 0px 1em pink, 0px 0px 0.2em orange;
-    }
-    to {
-      text-shadow: 5px 4px 10px coral, 1px 2px 3em pink, 2px 5px 0.6em orange;
-    }
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  height: 5rem;
+  background-color: var(--spongeblue);
+  align-items: center;
+  z-index: 10;
 }
 
 .logo {
-    width: 50%;
-    opacity: 0.8;
+  height: 80%;
+  margin-left: 1rem;
+  transition: all 0.2s;
 }
 
-.banner {
-    background-color: purple;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-    position: fixed;
-    
+.logo:hover {
+  transform: scale(1.05);
+  transition: all 0.2s;
 }
 
-
-video{ 
-    width: 100%;
-    object-fit: fill !important;
+.navmobile {
+  display: none;
 }
 
-.content {
-    display: flex;
-    padding-left: 25%;
-    color: white;
-    margin: 3rem;
-    flex-direction: column;
-    align-items:baseline;
+#link {
+  display: none;
 }
 
-.synth {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+#burger {
+  width: 2em;
+  height: 4px;
+  background: yellow;
+  display: inline-block;
+  position: relative;
+  margin-right: 2em;
 }
 
-
-@media only screen and (max-width: 720px){
-    
-    .synth {
-        justify-content: center;
-    }
+#burger::before,
+#burger::after {
+  content: "";
+  width: 2em;
+  height: 4px;
+  background: yellow;
+  display: inline-block;
+  position: absolute;
+  transform-origin: center;
+  transition: all 0.3s ease;
 }
 
-.synth h2,p {
-    flex-basis: 100%;
+#burger::before {
+  top: -10px;
 }
 
-#technic {
-    flex-basis: 50%;
+#burger::after {
+  top: 10px;
 }
 
-.synthpic {
-    flex-basis: 30%;
-    max-width: 40%;
-    border: 2px solid grey;
+#burger.open {
+  background: transparent; /* la barre du milieu disparait */
 }
 
-@media only screen and (max-width: 720px){
-    .synthpic {
-        flex-basis: 80%;
-        max-width: 90%;
-        margin-top: 1rem;
-    }
+/* celles du haut et du bas s'inclinent pour former une croix */
+#burger.open::before {
+  transform: rotate(45deg);
+  top: 0;
 }
 
-th,td {
-    padding: 0.5rem;
+#burger.open::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
-.content2 {
-    display: flex;
-    padding-left: 25%;
-    color: white;
-    margin: 3rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+.hidden {
+  opacity: 0;
 }
 
-
-.content2 h1,h2,h3,p,form {
-    flex-basis: 100%;
-    width: 100%;
+.icon {
+  display: none;
 }
 
-@media only screen and (max-width: 720px){
-    .content2 h1,h2,h3,p,form {
-        text-align: center;
-    }
-
+nav li {
+  display: inline-block;
+  margin: 0 2rem;
 }
 
-#aboutus {
-    justify-content: left;
-    align-items: center;
+nav a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 2rem;
+  transition: all 0.4s ease-in-out;
+  cursor: url("cursor1.png"), pointer;
 }
 
-#aboutus h2,ol {
-    flex-basis: 100%;
-    width: 100%;
+nav a:hover {
+  color: coral;
+  font-size: 2.2rem;
+  transition: all 0.2s ease-in-out;
 }
 
-#aboutus ol {
-    line-height: 2;
-    width: 30%;
-    flex-basis: 30%;
-    margin-right: 5rem;
+.fanclub {
+  background-color: yellow;
+  border: 5px dotted white;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  padding: 0 1em;
+  margin-right: 1rem;
 }
 
-@media only screen and (max-width: 720px){
-
-    #aboutus {
-        justify-content: center;
-        text-align: center;
-    }
-
-    #aboutus ol {
-        width: 100%;
-        flex-basis: 100%;
-        margin-right: 2rem;
-    }
+.fanclub:hover {
+  background-color: coral;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
-.minisynth {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-basis: 25%;
-    height: auto;
-    margin: 1em;
-    display: flex;
+.fanclub a {
+  text-decoration: none;
+  color: black;
+  cursor: url("cursor1.png"), pointer;
 }
 
-@media only screen and (max-width: 880px){
-    .minisynth {
-        margin: 0.5em;
-        flex-basis: 40%;
-    }
-}
-
-@media only screen and (max-width: 580px){
-    .minisynth {
-        margin: 0.5em;
-        flex-basis: 80%;
-    }
-}
-
-.minisynth:before {
-    content: '';
-    display: block;
-    padding-top: 90%;
-}
-
-.minisynth a{
-    width: 100%;
-    text-decoration: none;
-    color: white;
+.city {
+  background-image: url("resources/img/Bikini-Bottom.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .overlay {
-    background-color: rgba(0,0,0,0.6);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.overlay:hover {
-    opacity: 1;
-    transition: opacity 0.4s ease-in-out;
+h1 {
+  font-family: "SpongeBob Font Wide", sans-serif;
+  color: yellow;
 }
 
-.overlay p{
+#bikini {
+  font-size: 2.4rem;
+  -webkit-animation: 1s linear 0s infinite alternate glow;
+          animation: 1s linear 0s infinite alternate glow;
+  text-align: center;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 1px 1px 2px coral, 0 0 1em pink, 0 0 0.2em orange;
+  }
+  to {
+    text-shadow: 5px 4px 10px coral, 1 2 3em pink, 2 5 0.6em orange;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 1px 1px 2px coral, 0 0 1em pink, 0 0 0.2em orange;
+  }
+  to {
+    text-shadow: 5px 4px 10px coral, 1 2 3em pink, 2 5 0.6em orange;
+  }
+}
+.maincontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+  margin: 0;
+}
+
+.secondcontainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.friend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.friendpic {
+  width: 25%;
+  margin: 1rem;
+  border-radius: 50px;
+  border: 10px dotted yellow;
+  align-self: baseline;
+}
+
+.frienddesc {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  text-align: left;
+}
+
+table {
+  margin-bottom: 0.5rem;
+}
+
+table th, td {
+  background-color: white;
+  padding: 1rem;
+  width: 33%;
+}
+
+.starf {
+  width: 20%;
+}
+
+#secret {
+  display: none;
+  width: 33%;
+}
+
+.secretbutton {
+  padding: 0rem 1rem;
+  background-color: yellow;
+  border: 5px dotted black;
+  border-radius: 50px;
+  cursor: url("cursor1.png"), pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.secretbutton:hover {
+  background-color: coral;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.secretbutton:hover + #secret {
+  display: block;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: yellow;
+}
+
+#submitbutton {
+  background-color: yellow;
+  color: black;
+  font-family: "SpongeBob Font Condensed", sans-serif;
+  padding: 1rem;
+  border-radius: 50px;
+  cursor: url("cursor1.png"), pointer;
+}
+
+#ask {
+  margin-top: 6rem;
+}
+
+#wikibob {
+  width: 90%;
+}
+
+#fanh {
+  margin: 3rem 0;
+}
+
+#rank {
+  text-align: left;
+  line-height: 2rem;
+}
+
+textarea {
+  width: 50em;
+}
+
+footer {
+  color: yellow;
+  text-align: center;
+  height: 4rem;
+  position: relative;
+  bottom: 0;
+  margin-top: 6rem;
+  background-color: rgb(19, 1, 102);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 880px) {
+  nav li {
+    margin: 0 1rem;
+  }
+  nav a {
+    font-size: 1.4rem;
+  }
+  nav a:hover {
+    font-size: 1.5em;
+  }
+  #bikini {
+    font-size: 1.8rem;
+  }
+  textarea {
+    width: 30em;
+  }
+}
+@media all and (max-width: 700px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  p, tr, form {
+    font-size: 0.8em;
+  }
+  .navmobile {
+    display: flex;
+  }
+  .navdesktop {
+    display: none;
+  }
+  .fanclub {
+    display: none;
+  }
+  #link {
     display: inline-block;
-    padding-left: 1rem;
-    font-size: 1.2rem;
-}
-
-.asr {
-    background-image: url("resources/synths/asr10.jpg");
-}
-
-.feedbacks  {
-    padding: 1rem;
-    margin: 1rem;
-    border: 1px solid white;
-}
-
-dt, dd {
-    line-height: 2;
-}
-
-dt {
-    font-weight: 900;
-}
-
-label, input {
-    margin: 0.6rem 0;
-}
+  }
+  ul {
+    background: var(--spongeblue);
+    position: absolute;
+    width: 100%;
+    top: 5rem;
+    left: 0;
+    padding: 1em 0;
+    transform: scaleY(0);
+    transform-origin: center top;
+    transition: all 0.3s ease;
+    margin: 0;
+  }
+  ul.open {
+    transform: scaleY(1);
+  }
+  ul li {
+    text-align: center;
+  }
+  nav a:hover {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
