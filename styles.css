@@ -3,7 +3,6 @@ body {
   margin: 0;
   background-color: turquoise;
   cursor: url("cursor2.png"), default;
-  width: 100vh;
 }
 
 :root {
