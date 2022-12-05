@@ -1,28 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Technical metas -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Generic metas -->
     <meta name="author" content="Alexandre R">
-    <meta name="description" content="This is a personal website to show my love for Spongebob">
+    <meta name="description" content="Designed to show my love for Spongebob and his friends.">
+    <meta name="keywords" content="spongebob,patrick star,bikini bottom,squidward">
+    <meta name="Classification" content="Cartoon"> 
+
     <title>My Spongebob Website</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Spongebob website">
+    <meta property="og:description" content="Designed to show my love for Spongebob and his friends.">
+    <meta property="og:image" content="/resources/img/socialimage.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:title" content="My Spongebob website">
+    <meta property="twitter:description" content="Designed to show my love for Spongebob and his friends.">
+    <meta property="twitter:image" content="/resources/img/socialimage.jpg"">
+
+    <!-- Pinterest Claim -->
+    <meta name="p:domain_verify" content="My Spongebob website">
+    
+    <!-- Links -->
+    
+    
+    <!-- CSS External Files-->
     <link href="styles.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    
+    <!-- Favicons (png, ico, svg...)-->
+    <link rel="icon" href="favicons/favicon16.png" sizes="16x16"> 
+    <link rel="icon" href="favicons/favicon.png" sizes="32x32"> 
+    <link rel="icon" href="favicons/Favicon96.png" sizes="96x96"> 
+    <link rel="icon" href="favicons/favicon128.png" sizes="128x128"> 
+    <link rel="icon" href="favicons/favicon228.png" sizes="228x228"> 
+    <link rel="shortcut icon" href="favicons/favicon196.png" sizes="196x196">
+    <link rel="apple-touch-icon" href="favicons/Favicon180.png" sizes="180x180"> 
+    
+    <!-- Google Fonts-->
     <link href="https://fonts.cdnfonts.com/css/spongebob-font-condensed" rel="stylesheet">
+
 </head>
+
 <body>
 
     <header>
 
         <img src="resources/img/logo.webp" alt="logo-spongebob" class="logo">
 
+
         <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="friends.html">FRIENDS</a></li>
-                <li><a href="ask.html">ASK BOB</a></li>
-            </ul>
+            
+            <div class="navmobile">
+                <a id="link" href="#"><span id="burger"></span></a>
+                <ul class="navlist">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="friends.html">FRIENDS</a></li>
+                    <li><a href="ask.html">ASK BOB</a></li>
+                    <li><a href="fan.html" id="club">SPONGECLUB</a></li>
+                </ul>
+
+            </div>
+            
+            <div class="navdesktop">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="friends.html">FRIENDS</a></li>
+                    <li><a href="ask.html">ASK BOB</a></li>
+
+                </ul>
+            </div>
         </nav>
 
         <div class="fanclub">
@@ -39,7 +94,7 @@
         </div>
     </main>
 
-
+  <script src="app.js"></script>
 
 </body>
 </html>
