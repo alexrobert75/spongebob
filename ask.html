@@ -9,30 +9,30 @@
     
         <!-- Generic metas -->
         <meta name="author" content="Alexandre R">
-        <meta name="description" content="My Spongebob Website - Club">
+        <meta name="description" content="My Spongebob website - Ask Bob">
         <meta name="keywords" content="spongebob,patrick star,bikini bottom,squidward">
         <meta name="Classification" content="Cartoon"> 
     
-        <title>My Spongebob Website - Club</title>
+        <title>My Spongebob Website - Ask Bob</title>
     
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="My Spongebob website - Club">
-        <meta property="og:description" content="Join the Spongeclub">
+        <meta property="og:title" content="My Spongebob website - Ask Bob">
+        <meta property="og:description" content="Ask Spongebob">
         <meta property="og:image" content="/assets/img/socialimage.jpg">
     
         <!-- Twitter -->
-        <meta property="twitter:title" content="My Spongebob website - Club">
-        <meta property="twitter:description" content="Join the Spongeclub">
+        <meta property="twitter:title" content="My Spongebob website - Ask Bob">
+        <meta property="twitter:description" content="Ask Spongebobb">
         <meta property="twitter:image" content="/assets/img/socialimage.jpg"">
     
         <!-- Pinterest Claim -->
-        <meta name="p:domain_verify" content="My Spongebob website - Club">
+        <meta name="p:domain_verify" content="My Spongebob website - Ask Bob">
         
         <!-- Links -->
         
         <!-- CSS External Files-->
-        <link href="core/styles.css" rel="stylesheet">
+        <link href="core/styles.css" rel="stylesheet"> 
         
         <!-- Favicons (png, ico, svg...)-->
         <link rel="icon" href="favicons/favicon16.png" sizes="16x16"> 
@@ -87,55 +87,33 @@
         <div class="maincontainer">
             <div class="secondcontainer">
                 
-                <h1>JOIN THE CLUB !</h1>
+                <h1>LET'S CONTACT SPONGEBOB!</h1>
 
-                <h2>The Spongeclub is the best place to find other Bob lovers.</h2>
+                <p>You must have thousands of questions for Bob. Pick one and send it to him!</p>
 
 
                 <form>
-                    <label for="username">Your Sea name</label>
+                    <label for="name">Name</label>
                     <input type="text" name="name" id="name" required>
+                    <br>
+                    <label for="email">E-mail</label>
+                    <input type="email"  id="email" required>
+                    <br>
+                    <p>I am</p>
+                    <label for="recr">A Lander</label>
+                    <input type="radio" name="categ" id="recr" value="lander">
+                    <label for="cur">From the Sea</label>
+                    <input type="radio" name="categ" id="cur" value="seaman">
                     <br><br>
-                    <label for="passw">Your secret password</label>
-                    <input type="password" name="passw" id="passw">
-                    <br><br>
-                    <input type="submit" value="ENTER BIKINI BOTTOM" id="submitbutton">
+                    <textarea name="message" id="message" rows="22">Hi Bob, could you tell me...</textarea>
+                    <br>
+                    <input type="submit" value="SEND TO THE SEA" id="submitbutton">
                 </form>
 
-                <h2 id="fanh">Bob's top fans</h2>
-                <ol id="rank">
-                    <li>
-                        <ul>
-                            <li>François</li>
-                            <li>100 465 stars</li>
-                        </ul>
-                    <li>
-                        <ul>
-                            <li>Maria</li>
-                            <li>98 032 stars</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>Chris</li>
-                            <li>76 290 stars</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>Alex</li>
-                            <li>65 904 stars</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>Carolina</li>
-                            <li>64 876 stars</li>
-                        </ul>
-                    </li>
-
-                </ol>
-
+                <h2 id="ask">Bob didn't answer? Check for info here:</h2>
+                <iframe id="wikibob" title="Spongebob's wiki" height="1000"
+                src="https://spongebob.fandom.com/wiki/SpongeBob_SquarePants_(character)">
+                </iframe>
 
             </div>
 
