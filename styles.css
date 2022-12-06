@@ -3,6 +3,8 @@ body {
   margin: 0;
   background-color: turquoise;
   cursor: url("cursor2.png"), default;
+  width: 100vw;
+  height: 100vh;
 }
 
 :root {
@@ -211,6 +213,7 @@ h1 {
 
 .friend {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
@@ -378,5 +381,15 @@ footer {
   }
   nav a:hover {
     font-size: 1.4rem;
+  }
+  .friend {
+    flex-direction: column;
+  }
+  .friendpic {
+    align-self: center;
+    width: 50%;
+  }
+  .frienddesc {
+    align-items: center;
   }
 }/*# sourceMappingURL=styles.css.map */
