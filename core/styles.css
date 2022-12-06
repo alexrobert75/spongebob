@@ -167,17 +167,111 @@ nav a:hover {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
+/* Fonds bulles animées */
+.bubbless {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bubble {
+  max-width: 6%;
+  position: relative;
+  opacity: 0.8;
+}
+
+.bub1 {
+  animation: bubvert 2s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+  -webkit-animation: bubvert 2s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+}
+
+.bub2 {
+  animation: bubvert 1s linear infinite, bubhor 0.5s ease-in-out infinite alternate, bubsize 3s ease-in-out infinite alternate;
+  -webkit-animation: bubvert 1s linear infinite, bubhor 0.5s ease-in-out infinite alternate, bubsize 3s ease-in-out infinite alternate;
+}
+
+.bub3 {
+  animation: bubvert 3s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 1s ease-in-out infinite alternate;
+  -webkit-animation: bubvert 3s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 1s ease-in-out infinite alternate;
+}
+
+.bub4 {
+  animation: bubvert 2s linear infinite, bubhor 2s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+  -webkit-animation: bubvert 2s linear infinite, bubhor 2s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+}
+
+.bub5 {
+  animation: bubvert 1.5s linear infinite, bubhor 1.8s ease-in-out infinite alternate, bubsize 1.5s ease-in-out infinite alternate;
+  -webkit-animation: bubvert 1.5s linear infinite, bubhor 1.8s ease-in-out infinite alternate, bubsize 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes bubvert {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+@keyframes bubvert {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+@-webkit-keyframes bubhor {
+  from {
+    margin-right: -1%;
+  }
+  to {
+    margin-right: 2%;
+  }
+}
+@keyframes bubhor {
+  from {
+    margin-right: -1%;
+  }
+  to {
+    margin-right: 2%;
+  }
+}
+@-webkit-keyframes bubsize {
+  from {
+    width: 2%;
+  }
+  to {
+    width: 6%;
+  }
+}
+@keyframes bubsize {
+  from {
+    width: 5%;
+  }
+  to {
+    width: 6%;
+  }
+}
+/* Titre Bikini Bottom */
 #bikini {
   font-size: 2.4rem;
   -webkit-animation: 1s linear 0s infinite alternate glow;
-          animation: 1s linear 0s infinite alternate glow;
+  animation: 1s linear 0s infinite alternate glow;
   text-align: center;
+  left: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
 }
 
+/* Effet neon */
 @-webkit-keyframes glow {
   from {
     text-shadow: 1px 1px 2px coral, 0 0 1em pink, 0 0 0.2em orange;
@@ -186,7 +280,6 @@ nav a:hover {
     text-shadow: 5px 4px 10px coral, 1 2 3em pink, 2 5 0.6em orange;
   }
 }
-
 @keyframes glow {
   from {
     text-shadow: 1px 1px 2px coral, 0 0 1em pink, 0 0 0.2em orange;
@@ -195,9 +288,10 @@ nav a:hover {
     text-shadow: 5px 4px 10px coral, 1 2 3em pink, 2 5 0.6em orange;
   }
 }
+/* Effet doré du lien nav mobile*/
 #club {
   -webkit-animation: 2s linear 0s infinite alternate shine;
-          animation: 2s linear 0s infinite alternate shine;
+  animation: 2s linear 0s infinite alternate shine;
 }
 
 @-webkit-keyframes shine {
@@ -211,7 +305,6 @@ nav a:hover {
     color: gold;
   }
 }
-
 @keyframes shine {
   from {
     color: yellow;
@@ -413,4 +506,4 @@ footer {
   #rank li {
     text-align: left;
   }
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
