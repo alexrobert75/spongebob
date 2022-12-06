@@ -4,9 +4,10 @@ body {
   font-family: "SpongeBob Font Condensed", sans-serif;
   margin: 0;
   background-color: turquoise;
-  cursor: url("cursor2.png"), default;
-  width: 100vw;
+  cursor: url("../cursor2.png"), default;
+  max-width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 :root {
@@ -17,6 +18,8 @@ h1 {
   font-family: "SpongeBob Font Wide", sans-serif;
   color: yellow;
 }
+
+
 
 /* Mise en page commune */
 .maincontainer {
@@ -101,7 +104,6 @@ header {
   background: yellow;
   display: inline-block;
   position: absolute;
-  transition: all 0.3s ease;
 }
 
 #burger::before {
@@ -123,7 +125,7 @@ nav a {
   color: yellow;
   font-size: 2rem;
   transition: all 0.4s ease-in-out;
-  cursor: url("cursor1.png"), pointer;
+  cursor: url("../cursor1.png"), pointer;
 }
 
 nav a:hover {
@@ -150,7 +152,7 @@ nav a:hover {
 .fanclub a {
   text-decoration: none;
   color: black;
-  cursor: url("cursor1.png"), pointer;
+  cursor: url("../cursor1.png"), pointer;
 }
 
 /* Home */
@@ -186,6 +188,12 @@ nav a:hover {
   max-width: 6%;
   position: relative;
   opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.bubble:hover{
+  opacity: 0.2;
+  transition: opacity 0.2s;
 }
 
 .bub1 {
@@ -279,6 +287,7 @@ nav a:hover {
     right: 0;
     position: absolute;
     width: 100%;
+    cursor: url("../cursor1.png"), pointer;
 }
 
 /* Effet neon */
@@ -328,6 +337,27 @@ nav a:hover {
     color: gold;
   }
 }
+
+
+/* Popup ville */
+
+.bikinfo {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#bikdesc {
+  background-color: var(--spongeblue);
+  padding: 5rem;
+  color: white;
+  width: 50%;
+  text-align: center;
+  display: none;
+}
+
 /* Friends */
 .friend {
   display: flex;
@@ -377,7 +407,7 @@ table th, td {
   background-color: yellow;
   border: 5px dotted black;
   border-radius: 50px;
-  cursor: url("cursor1.png"), pointer;
+  cursor: url("../cursor1.png"), pointer;
   transition: background-color 0.2s ease-in-out;
   margin-bottom: 1rem;
 }
@@ -410,7 +440,7 @@ textarea {
   font-family: "SpongeBob Font Condensed", sans-serif;
   padding: 1rem;
   border-radius: 50px;
-  cursor: url("cursor1.png"), pointer;
+  cursor: url("../cursor1.png"), pointer;
 }
 
 #wikibob {
@@ -442,7 +472,7 @@ footer {
 }
 
 /* Responsive */
-@media all and (max-width: 880px) {
+@media all and (max-width: 900px) {
   nav li {
     margin: 0 1rem;
   }
@@ -452,14 +482,16 @@ footer {
   nav a:hover {
     font-size: 1.5em;
   }
+}
+
+@media all and (max-width: 720px) {
+
   #bikini {
     font-size: 1.8rem;
   }
   textarea {
     width: 20em;
   }
-}
-@media all and (max-width: 700px) {
   h1 {
     font-size: 1.6rem;
   }
@@ -482,7 +514,7 @@ footer {
     display: none;
   }
   #link {
-    display: inline-block;
+    display: block;
   }
   .navlist {
     background: var(--spongeblue);
@@ -505,6 +537,60 @@ footer {
   nav a:hover {
     font-size: 1.4rem;
   }
+
+  .bubble {
+    max-width: 15%;
+    position: relative;
+    opacity: 0.8;
+  }
+
+  .bub0 {
+    display: none;
+  }
+  
+  .bub1 {
+    animation: bubvert 4s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 4s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+  }
+  
+  .bub2 {
+    animation: bubvert 3s linear infinite, bubhor 0.5s ease-in-out infinite alternate, bubsize 3s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 3s linear infinite, bubhor 0.5s ease-in-out infinite alternate, bubsize 3s ease-in-out infinite alternate;
+  }
+  
+  .bub3 {
+      animation: bubvert 5s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 1s ease-in-out infinite alternate;
+      -webkit-animation: bubvert 5s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 1s ease-in-out infinite alternate;
+  }
+
+  .bub4 {
+    animation: bubvert 4.5s linear infinite, bubhor 2s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 4.5s linear infinite, bubhor 2s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+}
+
+  .bub5 {
+    animation: bubvert 5.5s linear infinite, bubhor 1.8s ease-in-out infinite alternate, bubsize 1.5s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 5.5s linear infinite, bubhor 1.8s ease-in-out infinite alternate, bubsize 1.5s ease-in-out infinite alternate;
+}
+
+  @-webkit-keyframes bubsize {
+    from {
+      width: 2%
+    }
+    to {
+        width: 6%
+    }
+}
+  
+@keyframes bubsize {
+    from {
+        width: 12%
+      }
+      to {
+        width: 15%
+      }
+}
+
   .friend {
     flex-direction: column;
   }
