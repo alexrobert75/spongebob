@@ -101,7 +101,6 @@ header {
   background: yellow;
   display: inline-block;
   position: absolute;
-  transition: all 0.3s ease;
 }
 
 #burger::before {
@@ -492,6 +491,50 @@ footer {
   }
   nav a:hover {
     font-size: 1.4rem;
+  }
+  .bubble {
+    max-width: 15%;
+    position: relative;
+    opacity: 0.8;
+  }
+  .bub0 {
+    display: none;
+  }
+  .bub1 {
+    animation: bubvert 4s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 4s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+  }
+  .bub2 {
+    animation: bubvert 3s linear infinite, bubhor 0.5s ease-in-out infinite alternate, bubsize 3s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 3s linear infinite, bubhor 0.5s ease-in-out infinite alternate, bubsize 3s ease-in-out infinite alternate;
+  }
+  .bub3 {
+    animation: bubvert 5s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 1s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 5s linear infinite, bubhor 1s ease-in-out infinite alternate, bubsize 1s ease-in-out infinite alternate;
+  }
+  .bub4 {
+    animation: bubvert 4.5s linear infinite, bubhor 2s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 4.5s linear infinite, bubhor 2s ease-in-out infinite alternate, bubsize 2s ease-in-out infinite alternate;
+  }
+  .bub5 {
+    animation: bubvert 5.5s linear infinite, bubhor 1.8s ease-in-out infinite alternate, bubsize 1.5s ease-in-out infinite alternate;
+    -webkit-animation: bubvert 5.5s linear infinite, bubhor 1.8s ease-in-out infinite alternate, bubsize 1.5s ease-in-out infinite alternate;
+  }
+  @-webkit-keyframes bubsize {
+    from {
+      width: 2%;
+    }
+    to {
+      width: 6%;
+    }
+  }
+  @keyframes bubsize {
+    from {
+      width: 12%;
+    }
+    to {
+      width: 15%;
+    }
   }
   .friend {
     flex-direction: column;
