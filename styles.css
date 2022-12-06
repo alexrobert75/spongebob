@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Style général */
 body {
   font-family: "SpongeBob Font Condensed", sans-serif;
   margin: 0;
@@ -11,6 +13,32 @@ body {
   --spongeblue: rgba(19, 1, 102, 0.9);
 }
 
+h1 {
+  font-family: "SpongeBob Font Wide", sans-serif;
+  color: yellow;
+}
+
+/* Mise en page commune */
+.maincontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+  margin: 0;
+}
+
+.secondcontainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -23,6 +51,7 @@ body {
   background: yellow;
 }
 
+/* Navigation */
 header {
   display: flex;
   position: fixed;
@@ -46,6 +75,7 @@ header {
   transition: all 0.2s;
 }
 
+/* Barre de navigation mobile */
 .navmobile {
   display: none;
 }
@@ -71,7 +101,6 @@ header {
   background: yellow;
   display: inline-block;
   position: absolute;
-  transform-origin: center;
   transition: all 0.3s ease;
 }
 
@@ -83,29 +112,7 @@ header {
   top: 10px;
 }
 
-#burger.open {
-  background: transparent; /* la barre du milieu disparait */
-}
-
-/* celles du haut et du bas s'inclinent pour former une croix */
-#burger.open::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-#burger.open::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-.icon {
-  display: none;
-}
-
+/* Barre de navigation desktop */
 nav li {
   display: inline-block;
   margin: 0 2rem;
@@ -146,6 +153,7 @@ nav a:hover {
   cursor: url("cursor1.png"), pointer;
 }
 
+/* Home */
 .city {
   background-image: url("resources/img/Bikini-Bottom.jpg");
   background-position: center;
@@ -161,11 +169,6 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-h1 {
-  font-family: "SpongeBob Font Wide", sans-serif;
-  color: yellow;
 }
 
 #bikini {
@@ -192,25 +195,7 @@ h1 {
     text-shadow: 5px 4px 10px coral, 1 2 3em pink, 2 5 0.6em orange;
   }
 }
-.maincontainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 7rem;
-  margin: 0;
-}
-
-.secondcontainer {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+/* Friends */
 .friend {
   display: flex;
   flex-direction: row;
@@ -234,6 +219,7 @@ h1 {
   text-align: left;
 }
 
+/* Tableau friends */
 table {
   margin-bottom: 0.5rem;
 }
@@ -268,12 +254,21 @@ table th, td {
   transition: background-color 0.2s ease-in-out;
 }
 
-.secretbutton:hover + #secret {
+.secretbutton:hover + #secret { /* Révèle le tableau caché */
   display: block;
 }
 
 audio::-webkit-media-controls-panel {
   background-color: yellow;
+}
+
+/* ASK */
+#ask {
+  margin-top: 6rem;
+}
+
+textarea {
+  width: 50em;
 }
 
 #submitbutton {
@@ -285,14 +280,11 @@ audio::-webkit-media-controls-panel {
   cursor: url("cursor1.png"), pointer;
 }
 
-#ask {
-  margin-top: 6rem;
-}
-
 #wikibob {
   width: 90%;
 }
 
+/* Spongeclub */
 #fanh {
   margin: 3rem 0;
 }
@@ -302,10 +294,7 @@ audio::-webkit-media-controls-panel {
   line-height: 2rem;
 }
 
-textarea {
-  width: 50em;
-}
-
+/* Footer */
 footer {
   color: yellow;
   text-align: center;
@@ -319,6 +308,7 @@ footer {
   align-items: center;
 }
 
+/* Responsive */
 @media all and (max-width: 880px) {
   nav li {
     margin: 0 1rem;
