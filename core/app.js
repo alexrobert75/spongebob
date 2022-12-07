@@ -1,7 +1,7 @@
 let link = document.getElementById('link')
 let burger = document.getElementById('burger')
 let ul = document.querySelector('ul')
-let overL = document.querySelector('bikinfo');
+let overL = document.getElementById('bikinfo');
 
 
 link.addEventListener('click', function() {
@@ -20,6 +20,6 @@ const hideP = elem => {
   }
 }
 
+overL.onclick = function(){hideP(popB)};
 bikiniB.onclick = function(){revealP(popB)};
 popB.onclick = function(){hideP(popB)};
-overL.onclick = function(){hideP(popB)};

@@ -77,10 +77,6 @@ header {
 }
 
 /* Barre de navigation mobile */
-.navmobile {
-  display: none;
-}
-
 #link {
   display: none;
 }
@@ -297,6 +293,7 @@ nav a:hover {
 }
 /* Effet doré du lien nav mobile*/
 #club {
+  display: none;
   -webkit-animation: 2s linear 0s infinite alternate shine;
   animation: 2s linear 0s infinite alternate shine;
 }
@@ -485,11 +482,8 @@ footer {
   p, tr, form {
     font-size: 0.8em;
   }
-  .navmobile {
-    display: flex;
-  }
-  .navdesktop {
-    display: none;
+  #club {
+    display: inline-block;
   }
   .fanclub {
     display: none;

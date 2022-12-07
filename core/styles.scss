@@ -20,7 +20,6 @@ h1 {
 }
 
 
-
 /* Mise en page commune */
 .maincontainer {
   width: 100%;
@@ -79,9 +78,6 @@ header {
 }
 
 /* Barre de navigation mobile */
-.navmobile {
-  display: none;
-}
 
 #link {
   display: none;
@@ -274,7 +270,7 @@ nav a:hover {
         width: 6%
       }
 }
-  
+
 
 /* Titre Bikini Bottom */
 
@@ -309,9 +305,11 @@ nav a:hover {
 }
 
 /* Effet doré du lien nav mobile*/
+
 #club {
-    -webkit-animation: 2s linear 0s infinite alternate shine;
-    animation: 2s linear 0s infinite alternate shine;
+  display: none;
+  -webkit-animation: 2s linear 0s infinite alternate shine;
+  animation: 2s linear 0s infinite alternate shine;
 }
 
 @-webkit-keyframes shine {
@@ -347,6 +345,7 @@ nav a:hover {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+
 }
 
 #bikdesc {
@@ -504,11 +503,8 @@ footer {
   p, tr, form {
     font-size: 0.8em;
   }
-  .navmobile {
-    display: flex;
-  }
-  .navdesktop {
-    display: none;
+  #club {
+    display: inline-block;
   }
   .fanclub {
     display: none;
