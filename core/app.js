@@ -32,13 +32,13 @@ for (var i = 0; i < bubbles.length; i++) {
     bubble.src = "assets/img/bubble-anim/expl1.png";
     setInterval(function () {
       bubble.src = "assets/img/bubble-anim/expl2.png";
-    }, 300);
+    }, 100);
     setInterval(function () {
       bubble.src = "assets/img/bubble-anim/expl3.png";
-    }, 500);
+    }, 200);
     setInterval(function () {
-      bubble.style.display = "none";
-    }, 700);
+      bubble.style.visibility = "hidden";
+    }, 300);
 
   }
 }
