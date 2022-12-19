@@ -25,7 +25,9 @@ bikiniB.onclick = function () { revealP(popB) };
 popB.onclick = function () { hideP(popB) };
 
 
+const scoreBoard = document.getElementById("scoreN");
 var bubbles = document.getElementsByClassName("bubble");
+let scoreNumb = 0;
 for (var i = 0; i < bubbles.length; i++) {
   let bubble = bubbles[i];
   bubble.onclick = function () {
@@ -39,6 +41,11 @@ for (var i = 0; i < bubbles.length; i++) {
     setInterval(function () {
       bubble.style.visibility = "hidden";
     }, 300);
-
+    scoreNumb += 1;
+    if (scoreNumb <= 1) {
+    scoreBoard.innerHTML = scoreNumb + " bubble";
+    } else {
+      scoreBoard.innerHTML = scoreNumb + " bubbles";
+    }
   }
 }
