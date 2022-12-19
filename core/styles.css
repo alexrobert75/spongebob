@@ -209,18 +209,18 @@ nav a:hover {
 
 @-webkit-keyframes bubvert {
   from {
-    bottom: 0px;
+    transform: translateY(0);
   }
   to {
-    bottom: 100%;
+    transform: translateY(-1000%);
   }
 }
 @keyframes bubvert {
   from {
-    bottom: 0px;
+    transform: translateY(0);
   }
   to {
-    bottom: 100%;
+    transform: translateY(-1000%);
   }
 }
 @-webkit-keyframes bubhor {
